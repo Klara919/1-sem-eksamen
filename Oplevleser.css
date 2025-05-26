@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+  }
+  
+  #Background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #Background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .text h1 {
+    color: white;
+    font-size: 6rem;
+    margin-top: 4rem;
+    font-family: ahsing;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+  }
+  
+  .logo img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 25px;
+    height: 25px;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    z-index: 2;
+  }
+  
+  /* Dropdown menu */
+  #burger-toggle {
+    display: none;
+  }
+  
+  .burger-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 3;
+    cursor: pointer;
+  }
+  
+  .burger-icon img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 3;
+  }
+  
+  #burger-toggle:checked + .burger-icon + .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #bddac2;
+  }
+
+
+/* SPLIT SECTIONS */
+.split-section {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .split-section.reverse {
+    flex-direction: row-reverse;
+  }
+  
+
+  .split-section .image{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40rem;
+  }
+
+  .image {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .image-wrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .text-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Montserrat', serif;
+    background: rgba(0, 0, 0, 0.3); /* Halvtransparent baggrund */
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  .image-wrapper a {
+    text-decoration: none;
+    color: inherit; /* Beholder tekstfarven fra .text-overlay */
+    display: block;
+  }
+
+
+
+  .image-wrapper a:hover .text-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Mørkere baggrund ved hover */
+  }
+  
+  .split-section.green .text-overlay {
+    color: white;
+  }
+  
+  .split-section.green {
+    background-color: #bddac2;
+  }
+  
+  .split-section.white {
+    background-color: white;
+  }
+  
+  .split-section.brown {
+    background-color: #513622;
+  }
+
+  /* Billede styles */
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .image5,
+  .image6{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4rem;
+    width: 100%;
+    min-height: 40rem;
+    margin: 2rem;
+   
+  }
+  
+  .image1 {
+    background-image: url('Images/Vineventyr.png');
+    
+  }
+  
+  .image2 {
+    background-image: url('Images/Picnic.jpg');
+  }
+  
+  .image3 {
+    background-image: url('Images/Drueplukning.jpg');
+  }
+  
+  .image4 {
+    background-image: url('Images/Cookingclass.png');
+  }
+
+  .image5 {
+    background-image: url('Images/Solnedgang.jpg');
+  }
+  
+  .image6 {
+    background-image: url('Images/Bare\ et\ par\ timer.jpg');
+  }
+
+  /* Tekst styling */
+  .split-section.green h2,
+  .split-section.white h2,
+  .split-section.brown h2{
+    font-family: 'Montserrat', serif;
+    font-size: 2rem;
+    color: white
+   
+  }
+  
+  .split-section.green p,
+  .split-section.white p,
+  .split-section.brown p {
+    font-family: 'Montserrat', serif;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: white;
+  }
+  
+#Ekstra{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 6rem;
+    background-color: #bddac2;
+    pointer-events: none;
+    border: 1rem solid white;
+   
+
+  }
+
+#Ekstra h2{
+    font-family: 'Montserrat', serif;
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#Ekstra p{
+    font-family: 'Montserrat', serif;
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+/* Fjerner irriterende blå streger under tekst*/
+#Ekstra * {
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Button styling */
+#button-container {
+    pointer-events: auto;
+    display: inline-block;
+    border: 2px solid #513622;
+    padding: 0;
+    border-radius: 50rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    background-color: white;
+}
+
+/* Button text styling */
+#button-container a {
+    display: block;
+    padding: 3px 20px;
+    color: #513622;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.4s ease, background-color 0.4s ease;
+    user-select: none;
+}
+
+#button-container:hover {
+    background-color: #513622;
+    box-shadow: 0 8px 16px rgba(81, 54, 34, 0.4);
+}
+
+#button-container:hover a {
+    color: white;
+    background-color: transparent;
+}
+
+
+    /* Footer */
+
+  footer{
+    display: flex;
+    background-color:#bddac2 ;
+    color: white;
+    justify-content: space-evenly;
+    padding: 2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    min-height: 200px;
+    
+  
+  }
+  
+  footer a{
+    color: white;
+    text-decoration: none;
+    font-family: montserrat;
+  
+  }
+  
+  footer div {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  footer h2 {
+    margin-bottom: 10px;
+    font-family: Montserrat;
+    text-align: center;
+  }
+  
+  footer img {
+    max-width: 2rem;
+  }
+  
+  footer form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer form input {
+    margin-bottom: 10px;
+  
+  
+  }
+  
+  footer form button {
+    background-color: White;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+
+
+  @media (max-width: 768px) {
+
+    .split-section {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+      }
+      .split-section.reverse {
+        flex-direction: column;
+      }
+    
+      .split-section .text,
+      .split-section .image {
+        width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
+      }
+    
+      .split-section .image {
+        min-height: 800px;
+        margin-bottom: 1rem;
+      }
+    
+      .split-section h2 {
+        font-size: 2rem;
+      }
+    
+      .split-section p {
+        font-size: 1.1rem;
+      }
+    
+
+    .text h1 {
+        font-size: 2.5rem;
+        margin-top: 6rem;
+        padding: 1rem;
+      }
+    
+      .logo {
+        width: 80px;
+        margin-top: -1rem;
+      }
+    
+      .burger-icon {
+        width: 50px;
+        height: 50px;
+      }
+    
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
+    
+    }
+
+    footer div {
+        margin:2rem 0;
+        text-align: center;
+    }
+}
