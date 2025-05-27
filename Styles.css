@@ -130,6 +130,12 @@ footer h2 {
     text-align: center;
 }
 
+footer p {
+  margin-top: 2.2rem;
+    font-family: Montserrat;
+    text-align: center;
+}
+
 footer img {
     max-width: 2rem;
 }
@@ -141,6 +147,7 @@ footer form {
 
 footer form input {
     margin-bottom: 10px;
+    font-family: Montserrat;
 
   
 }
@@ -152,6 +159,7 @@ footer form button {
     padding: 10px;
     cursor: pointer;
     border-radius: 0.5rem;
+    font-family: Montserrat;
 }
 
 
