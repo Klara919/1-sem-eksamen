@@ -7,16 +7,17 @@
   body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-background-color: #513622;  }
+    background-color: #513622;  }
   
-  #Background {
+/*Styling af hero sektion*/
+#Background {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
   }
   
-  #Background video {
+#Background video {
     position: absolute;
     top: 0;
     left: 0;
@@ -26,7 +27,7 @@ background-color: #513622;  }
     z-index: 0;
   }
   
-  .overlay {
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -40,14 +41,14 @@ background-color: #513622;  }
     justify-content: center;
   }
   
-  .text h1 {
+.text h1 {
     color: white;
     font-size: 6rem;
     margin-top: 4rem;
    font-family: ahsing;
   }
   
-  .logo {
+.logo {
     position: absolute;
     top: 1rem;
     left: 50%;
@@ -55,12 +56,12 @@ background-color: #513622;  }
     width: 100px;
   }
   
-  .logo img {
+.logo img {
     width: 100%;
     height: auto;
   }
   
-  .scroll-indicator {
+.scroll-indicator {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -72,12 +73,12 @@ background-color: #513622;  }
     z-index: 2;
   }
   
-  /* Dropdown menu */
-  #burger-toggle {
+/* Dropdown menu */
+#burger-toggle {
     display: none;
   }
   
-  .burger-icon {
+.burger-icon {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -87,12 +88,12 @@ background-color: #513622;  }
     cursor: pointer;
   }
   
-  .burger-icon img {
+.burger-icon img {
     width: 100%;
     height: 100%;
   }
   
-  .dropdown-content {
+.dropdown-content {
     position: absolute;
     top: 90px;
     left: 20px;
@@ -162,21 +163,20 @@ background-color: #513622;  }
   }
   
   
-  /* Tilføj pil */
-  summary::after {
+/* Tilføj pil */
+summary::after {
     content: "▼";
     font-size: 2rem;
     transition: transform 0.3s ease;
   }
   
-  /* Drej pil ved åben dropdown */
-  details[open] summary::after {
+/* Drej pil ved åben dropdown */
+details[open] summary::after {
     transform: rotate(180deg);
   }
 
 
-
-  .split-section {
+.split-section {
     display: flex;
     flex-wrap: wrap;
     height: auto;
@@ -185,10 +185,10 @@ background-color: #513622;  }
   }
   
   
-  .split-section .text,
-  .split-section .quote,
-  .split-section .image,
-  .split-section .content3 {
+.split-section .text,
+.split-section .quote,
+.split-section .image,
+.split-section .content3 {
     flex: 1;
     display: flex;
     align-items: center;
@@ -204,11 +204,11 @@ background-color: #513622;  }
   
   
 
-  .content {
+.content {
     margin-right: 2rem; /* giver afstand under content */
   }
 
-  .quote {
+.quote {
     display: flex;
     flex-direction: column; /* tvinger børn til at ligge lodret */
     background-color: #bddac2;
@@ -222,7 +222,7 @@ background-color: #513622;  }
    
   }
   
-  .quote p {
+.quote p {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
     margin-top: 1rem;
@@ -232,29 +232,29 @@ background-color: #513622;  }
   
   
   
-  .split-section.white {
-    background-color: white;
+.split-section.white {
+  background-color: white;
   }
   
 
-  /* Tekstformatering */
+/* Tekstformatering */
  .split-section.white{
-    color: #513622;
-    font-family: Montserrat;
-    
- }
+  color: #513622;
+  font-family: Montserrat;
+  }
   
-  .quote {
-    flex: 1;
-    background-color: #bddac2;
-    padding: 1rem;
-    height: 10rem;
-    border-left: 3px solid #bddac2;
-    font-style: italic;
-    margin-left: auto;
+/* Styling af quotet i første sektion (SOLARIS) */
+.quote {
+  flex: 1;
+  background-color: #bddac2;
+  padding: 1rem;
+  height: 10rem;
+  border-left: 3px solid #bddac2;
+  font-style: italic;
+  margin-left: auto;
   }
 
-
+/* Genrelt styling for billeder i split-sektioner */
 .image1, 
 .image2,
 .image3,
@@ -314,161 +314,172 @@ background-color: #513622;  }
 }
 
 
-
+/* Indhold i content3 (BOLERO SECTIONEN)*/
 .content3 {
-    background-color: #bddac2; 
-    padding: 2rem;
-    border-radius: 8px;
-    margin-top: 2rem;
-    width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #513622;
+  background-color: #bddac2; 
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #513622;
   }
   
-  .content3 h2 {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3rem;
-    font-size: 1.5rem;
-    text-transform: uppercase;
+.content3 h2 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
   }
-  
-  .content3 p {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    line-height: 1.5;
+
+.content3 p {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  line-height: 1.5;
   }
 
 
-
-
-  footer{
-    display: flex;
-    background-color:#513622 ;
-    color: white;
-    justify-content: space-evenly;
-    padding: 2rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    min-height: 200px;
-    
-  
+/* Footer styling */
+footer{
+  display: flex;
+  background-color:#513622 ;
+  color: white;
+  justify-content: space-evenly;
+  padding: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  min-height: 200px;
   }
   
-  footer a{
-    color: white;
-    text-decoration: none;
-    font-family: montserrat;
-  
+footer a{
+  color: white;
+  text-decoration: none;
+  font-family: montserrat;
   }
   
-  footer div {
-    flex: 1;
-    margin: 0 10px;
-    text-align: center;
+footer div {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
   }
   
-  footer h2 {
-    margin-bottom: 10px;
-    font-family: Montserrat;
-    text-align: center;
+footer h2 {
+  margin-bottom: 10px;
+  font-family: Montserrat;
+  text-align: center;
   }
   
-  footer p {
-    margin-top: 2.2rem;
-    font-family: Montserrat;
-    text-align: center;
+footer p {
+  margin-top: 2.2rem;
+  font-family: Montserrat;
+  text-align: center;
 }
 
 footer img {
-    max-width: 2rem;
+  max-width: 2rem;
 }
 
 footer form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 footer form input {
-    margin-bottom: 10px;
-    font-family: Montserrat;
+  margin-bottom: 10px;
+  font-family: Montserrat;
 }
 
 footer form button {
-    background-color: White;
-    color: black;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 0.5rem;
-    font-family: Montserrat;
+  background-color: White;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-family: Montserrat;
 }
 
-  @media (max-width: 768px) {
-    
-    .section {
+/* Responsiv styling */
+@media (max-width: 768px) {
+.section {
           flex-direction: column;
         }
     
-    .quote {
+.quote {
           margin-left: 0;
           margin-top: 1rem;
         }
 
-    .split-section {
-      flex-direction: column;
-    }
+.split-section {
+  flex-direction: column;
+  }
 
-    .text h1 {
-        font-size: 2.5rem;
-        margin-top: 6rem;
-        padding: 1rem;
+.text h1 {
+  font-size: 2.5rem;
+  margin-top: 6rem;
+  padding: 1rem;
+  }
+    
+.logo {
+  width: 80px;
+  margin-top: -1rem;
       }
     
-      .logo {
-        width: 80px;
-        margin-top: -1rem;
-      }
-    
-      .burger-icon {
-        width: 50px;
-        height: 50px;
-      }
-
+.burger-icon {
+  width: 50px;
+  height: 50px;
+  }
 
 #Underoverskrift h1 {
-        font-size: 3rem;
-        margin-top: 2rem;
-        text-align: center;
-      }
-
-summary {
-        font-size: 1rem;
-        
-      }
+  font-size: 3rem;
+  margin-top: 2rem;
+  text-align: center;
+  }
+      
+/* Tilføj responsiv styling for details/dropdowns */
+.summary {
+  font-size: 1rem;
+  }
     
-summary::after {
-        font-size: 1.5rem;
-        margin-top: 0.5rem;
+.summary::after {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  }
+
+.details {
+  margin: 1rem 0.5rem;
+  padding: 0.75rem;
+  }
+
+/* Split-sektioner */
+.section p, 
+.split-section p,
+.content3 p,
+.quote p {
+        font-size: 0.9rem; 
       }
 
-details {
-        margin: 1rem 0.5rem;
-        padding: 0.75rem;
-      }
-    
+/* Billeder i split-sektioner */
+.image1, .image2, .image3, .image4, .image5, .image6, .image7, .image8, .image9 {
+  min-height: 200px; /* reduceret højde */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90vw; /* tilpasser bredden til næsten hele skærmen */
+  }
 
-    footer{
-        flex-direction: column;
-        align-items: center;
-        padding: 3rem;
-    
-    }
+  /* Footer styling for mobil */
+footer{
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  }
 
-    footer div {
-        margin:2rem 0;
-        text-align: center;
-    }
+
+footer div {
+  margin:2rem 0;
+  text-align: center;
+  }
 }
