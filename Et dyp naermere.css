@@ -312,7 +312,7 @@ footer form button {
   .split-section {
     flex-direction: column;
     height: auto;
-    padding: 1rem;
+    padding: 2rem;
   }
   .split-section.reverse {
     flex-direction: column;
@@ -326,16 +326,21 @@ footer form button {
   }
 
   .split-section .image {
-    min-height: 800px;
+    min-height: 500px;
     margin-bottom: 1rem;
   }
-
-  .split-section h2 {
-    font-size: 2rem;
+.split-section.green h2,
+.split-section.reverse h2,
+.split-section.green2 h2{
+    font-size: 3rem;
   }
 
-  .split-section p {
-    font-size: 1.1rem;
+.split-section.green p {
+    font-size: 1rem;
+  }
+
+  .split-section.reverse p{
+    font-size: 1rem;
   }
 
   .text h1 {

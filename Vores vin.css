@@ -359,16 +359,26 @@ footer form button {
       }
     
       .split-section .image {
-        min-height: 800px;
+        min-height: 500px;
         margin-bottom: 1rem;
       }
     
-      .split-section h2 {
+      .split-section.green h2,
+      .split-section.white h2,
+      .split-section.green2 h2,
+      .split-section.white2 h2,
+      .split-section.green3 h2,
+      .split-section.white3 h2 {
         font-size: 2rem;
       }
     
-      .split-section p {
-        font-size: 1.1rem;
+      .split-section.green p,
+      .split-section.white p,
+      .split-section.green2 p,
+      .split-section.white2 p,
+      .split-section.green3 p,
+      .split-section.white3 p {
+        font-size: 0.8rem;
       }
     
       .text h1 {

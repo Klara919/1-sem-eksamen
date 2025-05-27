@@ -411,7 +411,7 @@ footer form button {
     .split-section {
         flex-direction: column;
         height: auto;
-        padding: 1rem;
+        padding: 2rem;
       }
       .split-section.reverse {
         flex-direction: column;
@@ -425,16 +425,44 @@ footer form button {
       }
     
       .split-section .image {
-        min-height: 800px;
+        min-height: 500px;
+        max-height: 500px;
         margin-bottom: 1rem;
       }
     
       .split-section h2 {
         font-size: 2rem;
       }
+
+      #Ekstra {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 3rem;
+        background-color: #bddac2;
+        pointer-events: none;
+        border: 1rem solid white;
+        
+      }
+
+      #Ekstra h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      #Ekstra p {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
     
-      .split-section p {
-        font-size: 1.1rem;
+  .split-section.green p,
+  .split-section.white p,
+  .split-section.brown p {
+        font-size: 0.8rem;
       }
     
 
